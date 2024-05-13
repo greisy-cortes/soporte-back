@@ -19,7 +19,7 @@ public class PaqueteController {
     ApiNubeService apiService;
 
     @GetMapping(value = "/tarifasTerrestre")
-    public Response getRoamingTarifasTerrestre(){
+    public Mono<Object> getRoamingTarifasTerrestre(){
 
     return apiService.getRoamingTerrestre();
     }

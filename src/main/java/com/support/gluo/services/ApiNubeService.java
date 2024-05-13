@@ -9,6 +9,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class ApiNubeService {
@@ -21,8 +22,8 @@ public class ApiNubeService {
     public ApiNubeService(WebClient.Builder webClientBuilder) {
         this.webClient = webClientBuilder.baseUrl("http://api-nube.telcel.com").build();
     }
-    public Response getRoamingTerrestre(){
-        return this.webClient.get().uri("/telcel-api-web/api/roaming/paquetesTarifasTerrestre/2/1").retrieve().body(Response.class);
+    public Mono<Object> getRoamingTerrestre(){
+        return this.webClient.get().uri("/telcel-api-web/api/roaming/paquetesTarifasTerrestre/2/1").retrieve().bodyToMono(Object.class);
     }
 
 }
