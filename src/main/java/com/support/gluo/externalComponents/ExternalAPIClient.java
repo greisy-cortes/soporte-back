@@ -15,6 +15,6 @@ public class ExternalAPIClient {
 
     public List<PaqueteDTO> getRoamingTerrestreFromApiNube() {
         // Realiza una solicitud GET a la API externa y obtiene los datos
-        return (List<PaqueteDTO>) webClient.get().uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasTerrestre/2/1").retrieve().bodyToMono(Object.class);
+        return (List<PaqueteDTO>) webClient.get().uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasTerrestre/2/1").retrieve().toEntity(Object.class);
     }
 }
