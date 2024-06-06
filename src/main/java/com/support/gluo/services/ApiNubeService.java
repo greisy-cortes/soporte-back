@@ -1,25 +1,35 @@
 package com.support.gluo.services;
 
-import com.support.gluo.externalComponents.ExternalAPIClient;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.support.gluo.dto.ResponseDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
+import org.springframework.web.client.RestClient;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class ApiNubeService {
 
-    @Autowired
-    private ExternalAPIClient externalAPIClient;
+    RestClient restClient = RestClient.create();
 
-    private final WebClient webClient;
+    public List<ResponseDTO> consultarServiciosApiNube() throws InterruptedException {
+        ResponseEntity<String> servicio1Response = restClient.get()
+                .uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasTerrestre/2/9")
+                .retrieve()
+                .toEntity(String.class);
 
-    public ApiNubeService(WebClient.Builder webClientBuilder) {
-        this.webClient = webClientBuilder.baseUrl("http://api-nube.telcel.com").build();
+        ResponseEntity<String> servicio2Response = restClient.get()
+                .uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasTerrestre/2/2")
+                .retrieve()
+                .toEntity(String.class);
+
+        List<ResponseDTO> responses = new ArrayList<>();
+
+        responses.add(new ResponseDTO("servicio1", servicio1Response.getStatusCode().value(), null));
+
+        responses.add(new ResponseDTO("servicio2", servicio2Response.getStatusCode().value(), null));
+        System.out.println(responses);
+        return responses;
     }
-    public Mono<ResponseEntity<String>> getRoamingTerrestre(){
-        return this.webClient.get().uri("/telcel-api-web/api/roaming/paquetesTarifasTerrestre/2/1").retrieve().toEntity(String.class);
-    }
-
 }
