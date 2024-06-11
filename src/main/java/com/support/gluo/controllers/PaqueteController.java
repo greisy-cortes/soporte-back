@@ -18,7 +18,7 @@ public class PaqueteController {
     ApiNubeService apiService;
 
     @GetMapping("/consultar-servicios")
-    public List<ResponseDTO> consultarServicios() throws InterruptedException {
+    public List<ResponseDTO> consultarServicios(){
         System.out.println(apiService.consultarServiciosApiNube());
         return apiService.consultarServiciosApiNube();
     }
