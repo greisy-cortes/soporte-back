@@ -14,21 +14,28 @@ public class ApiNubeService {
     RestClient restClient = RestClient.create();
 
     public List<ResponseDTO> consultarServiciosApiNube() throws InterruptedException {
-        ResponseEntity<String> servicio1Response = restClient.get()
-                .uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasTerrestre/2/9")
+        ResponseEntity<String> servicioTerrestre = restClient.get()
+                .uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasTerrestre/2/2")
                 .retrieve()
                 .toEntity(String.class);
 
-        ResponseEntity<String> servicio2Response = restClient.get()
-                .uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasTerrestre/2/2")
+        ResponseEntity<String> servicioMaritima = restClient.get()
+                .uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasMaritima/2/2")
+                .retrieve()
+                .toEntity(String.class);
+
+        ResponseEntity<String> servicioAerea = restClient.get()
+                .uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasAerea/2/2")
                 .retrieve()
                 .toEntity(String.class);
 
         List<ResponseDTO> responses = new ArrayList<>();
 
-        responses.add(new ResponseDTO("servicio1", servicio1Response.getStatusCode().value(), null));
+        responses.add(new ResponseDTO("Roaming Terrestre", servicioTerrestre.getStatusCode().value(), null));
 
-        responses.add(new ResponseDTO("servicio2", servicio2Response.getStatusCode().value(), null));
+        responses.add(new ResponseDTO("Roaming Maritima", servicioMaritima.getStatusCode().value(), null));
+
+        responses.add(new ResponseDTO("Roaming Aerea", servicioMaritima.getStatusCode().value(), null));
         System.out.println(responses);
         return responses;
     }
