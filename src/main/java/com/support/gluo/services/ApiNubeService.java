@@ -40,7 +40,7 @@ public class ApiNubeService {
                     .toEntity(String.class);
             return (new ResponseDTO("Roaming Terrestre", servicioTerrestre.getStatusCode().value(), servicioTerrestre.getBody()));
         } catch (HttpClientErrorException e){
-            return (new ResponseDTO("Roaming Terrestre", e.getStatusCode().value(), e.getResponseBodyAsString()));
+            return (new ResponseDTO("Roaming Terrestre", e.getStatusCode().value(), e.getMessage()));
         }
 
     }
@@ -53,7 +53,7 @@ public class ApiNubeService {
                     .toEntity(String.class);
             return (new ResponseDTO("Roaming Marítima", servicio.getStatusCode().value(), servicio.getBody()));
         } catch (HttpClientErrorException e) {
-            return (new ResponseDTO("Roaming Marítima", e.getStatusCode().value(), e.getResponseBodyAsString()));
+            return (new ResponseDTO("Roaming Marítima", e.getStatusCode().value(), e.getMessage()));
         }
     }
 
@@ -65,7 +65,7 @@ public class ApiNubeService {
                     .toEntity(String.class);
             return (new ResponseDTO("Roaming Aérea", servicio.getStatusCode().value(), servicio.getBody()));
         } catch (HttpClientErrorException.BadRequest e) {
-            return (new ResponseDTO("Roaming Aérea", e.getStatusCode().value(), e.getResponseBodyAsString()));
+            return (new ResponseDTO("Roaming Aérea", e.getStatusCode().value(), e.getMessage()));
         }
     }
 
@@ -77,7 +77,7 @@ public class ApiNubeService {
                     .toEntity(String.class);
             return (new ResponseDTO("Roaming Paises", servicio.getStatusCode().value(), servicio.getBody()));
         } catch (HttpClientErrorException.BadRequest e) {
-            return (new ResponseDTO("Roaming Paises", e.getStatusCode().value(), e.getResponseBodyAsString()));
+            return (new ResponseDTO("Roaming Paises", e.getStatusCode().value(), e.getMessage()));
         }
     }
 
@@ -89,7 +89,7 @@ public class ApiNubeService {
                     .toEntity(String.class);
             return (new ResponseDTO("Roaming Navieras y Aerolineas", servicio.getStatusCode().value(), servicio.getBody()));
         } catch (HttpClientErrorException.BadRequest e) {
-            return (new ResponseDTO("Roaming Navieras y Aerolineas", e.getStatusCode().value(), e.getResponseBodyAsString()));
+            return (new ResponseDTO("Roaming Navieras y Aerolineas", e.getStatusCode().value(), e.getMessage()));
         }
     }
 
@@ -101,7 +101,7 @@ public class ApiNubeService {
                     .toEntity(String.class);
             return (new ResponseDTO("Roaming Barcos y Aviones", servicio.getStatusCode().value(), servicio.getBody()));
         } catch (HttpClientErrorException.BadRequest e) {
-            return (new ResponseDTO("Roaming Barcos y Aviones", e.getStatusCode().value(), e.getResponseBodyAsString()));
+            return (new ResponseDTO("Roaming Barcos y Aviones", e.getStatusCode().value(), e.getMessage()));
         }
     }
 }
