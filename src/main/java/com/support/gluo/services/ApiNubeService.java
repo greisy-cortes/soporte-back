@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class ApiNubeService {
 
-    RestClient restClient = RestClient.create();
+    RestClient restClient = RestClient.create("http://api-nube.telcel.com/telcel-api-web/api/roaming");
 
     private final RestTemplate restTemplate;
     public ApiNubeService(RestTemplate restTemplate) {
@@ -26,55 +26,82 @@ public class ApiNubeService {
         responses.add(servicioTerrestre());
         responses.add(servicioMaritima());
         responses.add(servicioAerea());
+        //responses.add(servicioPaises());
+        //responses.add(servicioNavierasAerolineas());
+        //responses.add(servicioBarcosAviones());
 
-        System.out.println(responses);
         return responses;
     }
     public ResponseDTO servicioTerrestre() {
         try {
             ResponseEntity<String> servicioTerrestre = restClient.get()
-                    .uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasTerrestre/2/2")
+                    .uri("/paquetesTarifasTerrestre/2/2")
                     .retrieve()
                     .toEntity(String.class);
-            return (new ResponseDTO("Roaming Terrestre", servicioTerrestre.getStatusCode().value(), null));
-        } catch (HttpClientErrorException.BadRequest e) {
-            System.out.println("Error 400: Petición incorrecta");
-            return (new ResponseDTO("Roaming Terrestre", 400, e.getMessage()));
-        } catch (Exception e) {
-            System.out.println("Error inesperado: " + e.getMessage());
-            return (new ResponseDTO("Roaming Terrestre", 500, e.getMessage()));
+            return (new ResponseDTO("Roaming Terrestre", servicioTerrestre.getStatusCode().value(), servicioTerrestre.getBody()));
+        } catch (HttpClientErrorException e){
+            return (new ResponseDTO("Roaming Terrestre", e.getStatusCode().value(), e.getResponseBodyAsString()));
         }
+
     }
 
     public ResponseDTO servicioMaritima() {
         try {
             ResponseEntity<String> servicio = restClient.get()
-                    .uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasMaritima/2/2")
+                    .uri("/paquetesTarifasMaritima/2/2")
                     .retrieve()
                     .toEntity(String.class);
-            return (new ResponseDTO("Roaming Marítima", servicio.getStatusCode().value(), null));
-        } catch (HttpClientErrorException.BadRequest e) {
-            System.out.println("Error 400: Petición incorrecta");
-            return (new ResponseDTO("Roaming Marítima", 400, e.getMessage()));
-        } catch (Exception e) {
-            System.out.println("Error inesperado: " + e.getMessage());
-            return (new ResponseDTO("Roaming Marítima", 500, e.getMessage()));
+            return (new ResponseDTO("Roaming Marítima", servicio.getStatusCode().value(), servicio.getBody()));
+        } catch (HttpClientErrorException e) {
+            return (new ResponseDTO("Roaming Marítima", e.getStatusCode().value(), e.getResponseBodyAsString()));
         }
     }
 
     public ResponseDTO servicioAerea() {
         try {
             ResponseEntity<String> servicio = restClient.get()
-                    .uri("http://api-nube.telcel.com/telcel-api-web/api/roaming/paquetesTarifasAerea/2/2")
+                    .uri("/paquetesTarifasAerea/2/2s")
                     .retrieve()
                     .toEntity(String.class);
-            return (new ResponseDTO("Roaming Aérea", servicio.getStatusCode().value(), null));
+            return (new ResponseDTO("Roaming Aérea", servicio.getStatusCode().value(), servicio.getBody()));
         } catch (HttpClientErrorException.BadRequest e) {
-            System.out.println("Error 400: Petición incorrecta");
-            return (new ResponseDTO("Roaming Aérea", 400, e.getMessage()));
-        } catch (Exception e) {
-            System.out.println("Error inesperado: " + e.getMessage());
-            return (new ResponseDTO("Roaming Aérea", 500, e.getMessage()));
+            return (new ResponseDTO("Roaming Aérea", e.getStatusCode().value(), e.getResponseBodyAsString()));
+        }
+    }
+
+    public ResponseDTO servicioPaises() {
+        try {
+            ResponseEntity<String> servicio = restClient.get()
+                    .uri("/paisesConPaquetesyTarifas/9")
+                    .retrieve()
+                    .toEntity(String.class);
+            return (new ResponseDTO("Roaming Paises", servicio.getStatusCode().value(), servicio.getBody()));
+        } catch (HttpClientErrorException.BadRequest e) {
+            return (new ResponseDTO("Roaming Paises", e.getStatusCode().value(), e.getResponseBodyAsString()));
+        }
+    }
+
+    public ResponseDTO servicioNavierasAerolineas() {
+        try {
+            ResponseEntity<String> servicio = restClient.get()
+                    .uri("/lineasConPaquetesyTarifas/3/2")
+                    .retrieve()
+                    .toEntity(String.class);
+            return (new ResponseDTO("Roaming Navieras y Aerolineas", servicio.getStatusCode().value(), servicio.getBody()));
+        } catch (HttpClientErrorException.BadRequest e) {
+            return (new ResponseDTO("Roaming Navieras y Aerolineas", e.getStatusCode().value(), e.getResponseBodyAsString()));
+        }
+    }
+
+    public ResponseDTO servicioBarcosAviones() {
+        try {
+            ResponseEntity<String> servicio = restClient.get()
+                    .uri("/trasporteConPaquetesyTarifas/1/2")
+                    .retrieve()
+                    .toEntity(String.class);
+            return (new ResponseDTO("Roaming Barcos y Aviones", servicio.getStatusCode().value(), servicio.getBody()));
+        } catch (HttpClientErrorException.BadRequest e) {
+            return (new ResponseDTO("Roaming Barcos y Aviones", e.getStatusCode().value(), e.getResponseBodyAsString()));
         }
     }
 }
