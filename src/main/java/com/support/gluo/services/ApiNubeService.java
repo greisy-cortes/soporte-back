@@ -23,85 +23,25 @@ public class ApiNubeService {
 
         List<ResponseDTO> responses = new ArrayList<>();
 
-        responses.add(servicioTerrestre());
-        responses.add(servicioMaritima());
-        responses.add(servicioAerea());
-        //responses.add(servicioPaises());
-        //responses.add(servicioNavierasAerolineas());
-        //responses.add(servicioBarcosAviones());
+        responses.add(newService("/paquetesTarifasTerrestre/2/2", "Roaming Terrestre"));
+        responses.add(newService("/paquetesTarifasMaritima/2/2", "Roaming Maritima"));
+        responses.add(newService("/paquetesTarifasAerea/2/2", "Roaming Aerea"));
+        responses.add(newService("/paisesConPaquetesyTarifas/9", "Países con paquetes y tarifas"));
+        responses.add(newService("/lineasConPaquetesyTarifas/3/2", "Navieras y Aerolíneas"));
+        responses.add(newService("/trasporteConPaquetesyTarifas/1/2", "Barcos y Aviones"));
 
         return responses;
     }
-    public ResponseDTO servicioTerrestre() {
+
+    public ResponseDTO newService(String uri, String serviceName){
         try {
             ResponseEntity<String> servicioTerrestre = restClient.get()
-                    .uri("/paquetesTarifasTerrestre/2/2")
+                    .uri(uri)
                     .retrieve()
                     .toEntity(String.class);
-            return (new ResponseDTO("Roaming Terrestre", servicioTerrestre.getStatusCode().value(), servicioTerrestre.getBody()));
+            return (new ResponseDTO(serviceName, servicioTerrestre.getStatusCode().value(), servicioTerrestre.getBody()));
         } catch (HttpClientErrorException e){
-            return (new ResponseDTO("Roaming Terrestre", e.getStatusCode().value(), e.getMessage()));
-        }
-
-    }
-
-    public ResponseDTO servicioMaritima() {
-        try {
-            ResponseEntity<String> servicio = restClient.get()
-                    .uri("/paquetesTarifasMaritima/2/2")
-                    .retrieve()
-                    .toEntity(String.class);
-            return (new ResponseDTO("Roaming Marítima", servicio.getStatusCode().value(), servicio.getBody()));
-        } catch (HttpClientErrorException e) {
-            return (new ResponseDTO("Roaming Marítima", e.getStatusCode().value(), e.getMessage()));
-        }
-    }
-
-    public ResponseDTO servicioAerea() {
-        try {
-            ResponseEntity<String> servicio = restClient.get()
-                    .uri("/paquetesTarifasAerea/2/2s")
-                    .retrieve()
-                    .toEntity(String.class);
-            return (new ResponseDTO("Roaming Aérea", servicio.getStatusCode().value(), servicio.getBody()));
-        } catch (HttpClientErrorException.BadRequest e) {
-            return (new ResponseDTO("Roaming Aérea", e.getStatusCode().value(), e.getMessage()));
-        }
-    }
-
-    public ResponseDTO servicioPaises() {
-        try {
-            ResponseEntity<String> servicio = restClient.get()
-                    .uri("/paisesConPaquetesyTarifas/9")
-                    .retrieve()
-                    .toEntity(String.class);
-            return (new ResponseDTO("Roaming Paises", servicio.getStatusCode().value(), servicio.getBody()));
-        } catch (HttpClientErrorException.BadRequest e) {
-            return (new ResponseDTO("Roaming Paises", e.getStatusCode().value(), e.getMessage()));
-        }
-    }
-
-    public ResponseDTO servicioNavierasAerolineas() {
-        try {
-            ResponseEntity<String> servicio = restClient.get()
-                    .uri("/lineasConPaquetesyTarifas/3/2")
-                    .retrieve()
-                    .toEntity(String.class);
-            return (new ResponseDTO("Roaming Navieras y Aerolineas", servicio.getStatusCode().value(), servicio.getBody()));
-        } catch (HttpClientErrorException.BadRequest e) {
-            return (new ResponseDTO("Roaming Navieras y Aerolineas", e.getStatusCode().value(), e.getMessage()));
-        }
-    }
-
-    public ResponseDTO servicioBarcosAviones() {
-        try {
-            ResponseEntity<String> servicio = restClient.get()
-                    .uri("/trasporteConPaquetesyTarifas/1/2")
-                    .retrieve()
-                    .toEntity(String.class);
-            return (new ResponseDTO("Roaming Barcos y Aviones", servicio.getStatusCode().value(), servicio.getBody()));
-        } catch (HttpClientErrorException.BadRequest e) {
-            return (new ResponseDTO("Roaming Barcos y Aviones", e.getStatusCode().value(), e.getMessage()));
+            return (new ResponseDTO(serviceName, e.getStatusCode().value(), e.getMessage()));
         }
     }
 }
