@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+      
+    <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.0 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2024.09.02 a las 05:55:29 PM CST 
+
+  -->
+      
+    <bindings xmlns:tns="http://webservices.ddas.gis.sss.dfa.telcel.com/" if-exists="true" scd="x-schema::tns">
+            
+        <schemaBindings map="false">
+                  
+            <package name="com.gluo.wsdl"/>
+                
+        </schemaBindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaArchivoFactura">
+                  
+            <class ref="com.gluo.wsdl.ConsultaArchivoFactura"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaArchivoFacturaResponse">
+                  
+            <class ref="com.gluo.wsdl.ConsultaArchivoFacturaResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaComplementoPdf">
+                  
+            <class ref="com.gluo.wsdl.ConsultaComplementoPdf"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaComplementoPdfResponse">
+                  
+            <class ref="com.gluo.wsdl.ConsultaComplementoPdfResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaComplementoXml">
+                  
+            <class ref="com.gluo.wsdl.ConsultaComplementoXml"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaComplementoXmlResponse">
+                  
+            <class ref="com.gluo.wsdl.ConsultaComplementoXmlResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaFacturaGeneral">
+                  
+            <class ref="com.gluo.wsdl.ConsultaFacturaGeneral"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaFacturaGeneralResponse">
+                  
+            <class ref="com.gluo.wsdl.ConsultaFacturaGeneralResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaFacturaPDFXML">
+                  
+            <class ref="com.gluo.wsdl.ConsultaFacturaPDFXML"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaFacturaPDFXMLResponse">
+                  
+            <class ref="com.gluo.wsdl.ConsultaFacturaPDFXMLResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaFacturas">
+                  
+            <class ref="com.gluo.wsdl.ConsultaFacturas"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaFacturasCPago">
+                  
+            <class ref="com.gluo.wsdl.ConsultaFacturasCPago"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaFacturasCPagoResponse">
+                  
+            <class ref="com.gluo.wsdl.ConsultaFacturasCPagoResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaFacturasObjeto">
+                  
+            <class ref="com.gluo.wsdl.ConsultaFacturasObjeto"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaFacturasObjetoResponse">
+                  
+            <class ref="com.gluo.wsdl.ConsultaFacturasObjetoResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaFacturasResponse">
+                  
+            <class ref="com.gluo.wsdl.ConsultaFacturasResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaNotaVenta">
+                  
+            <class ref="com.gluo.wsdl.ConsultaNotaVenta"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaNotaVentaResponse">
+                  
+            <class ref="com.gluo.wsdl.ConsultaNotaVentaResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:descargaMasivaPdfXml">
+                  
+            <class ref="com.gluo.wsdl.DescargaMasivaPdfXml"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:descargaMasivaPdfXmlResponse">
+                  
+            <class ref="com.gluo.wsdl.DescargaMasivaPdfXmlResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultaFacturaTO">
+                  
+            <class ref="com.gluo.wsdl.ConsultaFacturaTO"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:facturaTO">
+                  
+            <class ref="com.gluo.wsdl.FacturaTO"/>
+                
+        </bindings>
+          
+    </bindings>
+    
+</bindings>
