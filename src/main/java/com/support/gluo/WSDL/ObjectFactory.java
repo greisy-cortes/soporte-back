@@ -8,18 +8,18 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the WSDL package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the WSDL package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
+ *
  */
 @XmlRegistry
 public class ObjectFactory {
@@ -48,14 +48,14 @@ public class ObjectFactory {
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: WSDL
-     * 
+     *
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link ConsultaArchivoFactura }
-     * 
+     *
      */
     public ConsultaArchivoFactura createConsultaArchivoFactura() {
         return new ConsultaArchivoFactura();
@@ -63,7 +63,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaArchivoFacturaResponse }
-     * 
+     *
      */
     public ConsultaArchivoFacturaResponse createConsultaArchivoFacturaResponse() {
         return new ConsultaArchivoFacturaResponse();
@@ -71,7 +71,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaComplementoPdf }
-     * 
+     *
      */
     public ConsultaComplementoPdf createConsultaComplementoPdf() {
         return new ConsultaComplementoPdf();
@@ -79,7 +79,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaComplementoPdfResponse }
-     * 
+     *
      */
     public ConsultaComplementoPdfResponse createConsultaComplementoPdfResponse() {
         return new ConsultaComplementoPdfResponse();
@@ -87,7 +87,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaComplementoXml }
-     * 
+     *
      */
     public ConsultaComplementoXml createConsultaComplementoXml() {
         return new ConsultaComplementoXml();
@@ -95,7 +95,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaComplementoXmlResponse }
-     * 
+     *
      */
     public ConsultaComplementoXmlResponse createConsultaComplementoXmlResponse() {
         return new ConsultaComplementoXmlResponse();
@@ -103,7 +103,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaFacturaGeneral }
-     * 
+     *
      */
     public ConsultaFacturaGeneral createConsultaFacturaGeneral() {
         return new ConsultaFacturaGeneral();
@@ -111,7 +111,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaFacturaGeneralResponse }
-     * 
+     *
      */
     public ConsultaFacturaGeneralResponse createConsultaFacturaGeneralResponse() {
         return new ConsultaFacturaGeneralResponse();
@@ -119,7 +119,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaFacturaPDFXML }
-     * 
+     *
      */
     public ConsultaFacturaPDFXML createConsultaFacturaPDFXML() {
         return new ConsultaFacturaPDFXML();
@@ -127,7 +127,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaFacturaPDFXMLResponse }
-     * 
+     *
      */
     public ConsultaFacturaPDFXMLResponse createConsultaFacturaPDFXMLResponse() {
         return new ConsultaFacturaPDFXMLResponse();
@@ -135,7 +135,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaFacturas }
-     * 
+     *
      */
     public ConsultaFacturas createConsultaFacturas() {
         return new ConsultaFacturas();
@@ -143,7 +143,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaFacturasCPago }
-     * 
+     *
      */
     public ConsultaFacturasCPago createConsultaFacturasCPago() {
         return new ConsultaFacturasCPago();
@@ -151,7 +151,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaFacturasCPagoResponse }
-     * 
+     *
      */
     public ConsultaFacturasCPagoResponse createConsultaFacturasCPagoResponse() {
         return new ConsultaFacturasCPagoResponse();
@@ -159,7 +159,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaFacturasObjeto }
-     * 
+     *
      */
     public ConsultaFacturasObjeto createConsultaFacturasObjeto() {
         return new ConsultaFacturasObjeto();
@@ -167,7 +167,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaFacturasObjetoResponse }
-     * 
+     *
      */
     public ConsultaFacturasObjetoResponse createConsultaFacturasObjetoResponse() {
         return new ConsultaFacturasObjetoResponse();
@@ -175,7 +175,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaFacturasResponse }
-     * 
+     *
      */
     public ConsultaFacturasResponse createConsultaFacturasResponse() {
         return new ConsultaFacturasResponse();
@@ -183,7 +183,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaNotaVenta }
-     * 
+     *
      */
     public ConsultaNotaVenta createConsultaNotaVenta() {
         return new ConsultaNotaVenta();
@@ -191,7 +191,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaNotaVentaResponse }
-     * 
+     *
      */
     public ConsultaNotaVentaResponse createConsultaNotaVentaResponse() {
         return new ConsultaNotaVentaResponse();
@@ -199,7 +199,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DescargaMasivaPdfXml }
-     * 
+     *
      */
     public DescargaMasivaPdfXml createDescargaMasivaPdfXml() {
         return new DescargaMasivaPdfXml();
@@ -207,7 +207,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DescargaMasivaPdfXmlResponse }
-     * 
+     *
      */
     public DescargaMasivaPdfXmlResponse createDescargaMasivaPdfXmlResponse() {
         return new DescargaMasivaPdfXmlResponse();
@@ -215,7 +215,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConsultaFacturaTO }
-     * 
+     *
      */
     public ConsultaFacturaTO createConsultaFacturaTO() {
         return new ConsultaFacturaTO();
@@ -223,7 +223,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FacturaTO }
-     * 
+     *
      */
     public FacturaTO createFacturaTO() {
         return new FacturaTO();
@@ -231,7 +231,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaArchivoFactura }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -244,7 +244,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaArchivoFacturaResponse }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -257,7 +257,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaComplementoPdf }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -270,7 +270,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaComplementoPdfResponse }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -283,7 +283,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaComplementoXml }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -296,7 +296,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaComplementoXmlResponse }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -309,7 +309,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaFacturaGeneral }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -322,7 +322,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaFacturaGeneralResponse }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -335,7 +335,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaFacturaPDFXML }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -348,7 +348,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaFacturaPDFXMLResponse }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -361,7 +361,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaFacturas }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -374,7 +374,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaFacturasCPago }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -387,7 +387,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaFacturasCPagoResponse }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -400,7 +400,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaFacturasObjeto }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -413,7 +413,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaFacturasObjetoResponse }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -426,7 +426,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaFacturasResponse }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -439,7 +439,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaNotaVenta }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -452,7 +452,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultaNotaVentaResponse }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -465,7 +465,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DescargaMasivaPdfXml }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -478,7 +478,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DescargaMasivaPdfXmlResponse }{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return
@@ -491,7 +491,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}
-     * 
+     *
      * @param value
      *     Java instance representing xml element's value.
      * @return

@@ -1,6 +1,7 @@
 
-package obtenerPerfilWSDL;
+package com.support.gluo.obtenerPerfilWSDL;
 
+import com.support.gluo.obtenerPerfilWSDL.ObjectFactory;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import jakarta.jws.WebResult;

@@ -1,5 +1,5 @@
 
-package obtenerPerfilWSDL;
+package com.support.gluo.obtenerPerfilWSDL;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;

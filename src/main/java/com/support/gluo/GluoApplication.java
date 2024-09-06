@@ -1,12 +1,12 @@
 package com.support.gluo;
 
-import com.support.gluo.business.ConsultaFactura;
+import com.support.gluo.business.Perfilador;
+import com.support.gluo.obtenerPerfilWSDL.ObtenerPerfilResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import WSDL.ConsultaFacturaPDFXMLResponse;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
@@ -17,6 +17,14 @@ public class GluoApplication {
 	}
 
 	@Bean
+	CommandLineRunner init(Perfilador perfil){
+		return args -> {
+			ObtenerPerfilResponse response = perfil.obtenerPerfil("5529082001", "", "");
+			System.out.println(response);
+		};
+	}
+/**
+	@Bean
 	CommandLineRunner init(ConsultaFactura consultaFactura){
 		return args -> {
 
@@ -25,5 +33,7 @@ public class GluoApplication {
 			LOGGER.info("Se consumio el servicio: {}", response.getReturn());
 		};
 	}
+	**/
+
 
 }

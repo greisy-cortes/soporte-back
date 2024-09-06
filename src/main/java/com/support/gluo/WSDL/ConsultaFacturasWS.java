@@ -2,6 +2,8 @@
 package WSDL;
 
 import java.util.List;
+
+import com.support.gluo.obtenerPerfilWSDL.ObjectFactory;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import jakarta.jws.WebResult;

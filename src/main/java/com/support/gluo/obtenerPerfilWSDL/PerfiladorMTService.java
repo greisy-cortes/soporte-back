@@ -4,6 +4,8 @@ package obtenerPerfilWSDL;
 import java.net.MalformedURLException;
 import java.net.URL;
 import javax.xml.namespace.QName;
+
+import com.support.gluo.obtenerPerfilWSDL.PerfiladorMT;
 import jakarta.xml.ws.Service;
 import jakarta.xml.ws.WebEndpoint;
 import jakarta.xml.ws.WebServiceClient;
