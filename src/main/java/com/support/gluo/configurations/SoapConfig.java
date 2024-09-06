@@ -8,7 +8,7 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
 @Configuration
 public class SoapConfig {
-@Bean
+
     public Jaxb2Marshaller marshaller(){
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
         marshaller.setContextPath("WSDL");
@@ -17,7 +17,10 @@ public class SoapConfig {
     }
 
 @Bean
-    public ConsultaFactura getSoapClient(Jaxb2Marshaller marshaller){
+    public ConsultaFactura getSoapClient(){
+        Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
+        marshaller.setContextPath("WSDL");
+
         ConsultaFactura facturaBusiness = new ConsultaFactura();
         facturaBusiness.setDefaultUri("http://sap.intranet.telcelinstitucional.com:80/WSFactConsignacionWEB/ConsultaFacturasWSService");
         facturaBusiness.setMarshaller(marshaller);
@@ -27,7 +30,10 @@ public class SoapConfig {
     }
 
 @Bean
-    public Perfilador obtenerPerfilSoap(Jaxb2Marshaller marshaller){
+    public Perfilador obtenerPerfilSoap(){
+        Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
+        marshaller.setContextPath("com.support.gluo.obtenerPerfilWSDL");
+
         Perfilador perfil = new Perfilador();
         perfil.setDefaultUri("http://clientesw.telcel.com/PerfiladorMTV2/services/PerfiladorMT");
         perfil.setMarshaller(marshaller);

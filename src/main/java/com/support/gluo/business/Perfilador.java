@@ -8,18 +8,16 @@ import org.springframework.ws.soap.client.core.SoapActionCallback;
 
 public class Perfilador extends WebServiceGatewaySupport {
 
-    public ObtenerPerfilResponse obtenerPerfil(String telefono, String origen, String accion){
+    public ObtenerPerfilResponse obtenerPerfil(String telefono){
 
 
         ObtenerPerfil request = new ObtenerPerfil();
         request.setTelefono(telefono);
-        request.setOrigen(origen);
-        request.setAccion(accion);
         SoapActionCallback soapActionCallback = new SoapActionCallback("http://negocio.perfiladormt.dsie.gsa.sds.di.telcel.com.mx/obtenerPerfil");
-        JAXBElement<ObtenerPerfilResponse> response = (JAXBElement<ObtenerPerfilResponse>)getWebServiceTemplate().marshalSendAndReceive("http://clientesw.telcel.com/PerfiladorMTV2/services/PerfiladorMT", request, soapActionCallback);
-        //obtenerPerfilWSDL.ObtenerPerfilResponse response = (obtenerPerfilWSDL.ObtenerPerfilResponse)getWebServiceTemplate().marshalSendAndReceive("http://clientesw.telcel.com/PerfiladorMTV2/services/PerfiladorMT", request, soapActionCallback);
-
-        return response.getValue();
+        //JAXBElement<ObtenerPerfilResponse> response = (JAXBElement<ObtenerPerfilResponse>)getWebServiceTemplate().marshalSendAndReceive("http://clientesw.telcel.com/PerfiladorMTV2/services/PerfiladorMT", request, soapActionCallback);
+        ObtenerPerfilResponse response = (ObtenerPerfilResponse)getWebServiceTemplate().marshalSendAndReceive("http://clientesw.telcel.com/PerfiladorMTV2/services/PerfiladorMT", request, soapActionCallback);
+        System.out.println(response.getObtenerPerfilReturn());
+        return response;
     }
 
 

@@ -1,5 +1,6 @@
 package com.support.gluo;
 
+import com.support.gluo.business.ConsultaFactura;
 import com.support.gluo.business.Perfilador;
 import com.support.gluo.obtenerPerfilWSDL.ObtenerPerfilResponse;
 import org.slf4j.Logger;
@@ -19,8 +20,8 @@ public class GluoApplication {
 	@Bean
 	CommandLineRunner init(Perfilador perfil){
 		return args -> {
-			ObtenerPerfilResponse response = perfil.obtenerPerfil("5529082001", "", "");
-			System.out.println(response);
+			ObtenerPerfilResponse response = perfil.obtenerPerfil("5529082001");
+			System.out.println(response.getObtenerPerfilReturn());
 		};
 	}
 /**
@@ -28,12 +29,12 @@ public class GluoApplication {
 	CommandLineRunner init(ConsultaFactura consultaFactura){
 		return args -> {
 
-			ConsultaFacturaPDFXMLResponse response = consultaFactura.getFacturaResponse("STC_TELCELCO", "T3LC3L");
+			WSDL.ConsultaFacturaPDFXMLResponse response = consultaFactura.getFacturaResponse("STC_TELCELCO", "T3LC3L");
 
 			LOGGER.info("Se consumio el servicio: {}", response.getReturn());
 		};
 	}
-	**/
+**/
 
 
 }
