@@ -32,7 +32,7 @@ public class SoapConfig {
 @Bean
     public Perfilador obtenerPerfilSoap(){
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setContextPath("com.support.gluo.obtenerPerfilWSDL");
+        marshaller.setContextPath("com.support.gluo.WSDL");
 
         Perfilador perfil = new Perfilador();
         perfil.setDefaultUri("http://clientesw.telcel.com/PerfiladorMTV2/services/PerfiladorMT");

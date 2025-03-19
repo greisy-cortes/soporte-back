@@ -17,13 +17,6 @@ public class GluoApplication {
 		SpringApplication.run(GluoApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner init(Perfilador perfil){
-		return args -> {
-			ObtenerPerfilResponse response = perfil.obtenerPerfil("5529082001");
-			System.out.println(response.getObtenerPerfilReturn());
-		};
-	}
 /**
 	@Bean
 	CommandLineRunner init(ConsultaFactura consultaFactura){

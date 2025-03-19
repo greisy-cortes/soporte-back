@@ -26,4 +26,5 @@ public class PaqueteController {
         apiNubeServices.put("QA", apiService.consultarServiciosApiNube("http://bo-uat.telcel.com/telcel-api-web/api/roaming"));
         return apiNubeServices;
     }
+
 }

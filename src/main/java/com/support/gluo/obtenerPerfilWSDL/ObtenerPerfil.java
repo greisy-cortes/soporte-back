@@ -40,9 +40,9 @@ public class ObtenerPerfil {
 
     @XmlElement(required = true)
     protected String telefono;
-    @XmlElement(required = false)
+    @XmlElement(required = true)
     protected String origen;
-    @XmlElement(required = false)
+    @XmlElement(required = true)
     protected String accion;
 
     /**
